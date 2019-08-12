@@ -5,10 +5,9 @@ node_modules
 tmp
 
 # Environment variables, never commit this file
-.env
+
 
 # database
-/config/database.js
 
 # archivos
 public
