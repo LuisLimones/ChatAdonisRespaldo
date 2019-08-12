@@ -4,9 +4,7 @@ const Conversacion = use('App/Models/Conversaciones')
 
 class ConversacionController {
 
-    //esta ruta crea en chat
     async iniciarConversacion({request,response}){
-        
             let cantidad = request.input('usuarios').length;
             let conver_existente = await Conversacion.findOne({usuarios: {$all: request.input('usuarios'), $size: cantidad}})
             if(conver_existente){
@@ -25,8 +23,8 @@ class ConversacionController {
 
     async registrarMensaje({request, response}){
         try {
-            await   Conversacion.find({ id_chat: request.input('id_chat') })
-                                .updateOne({ $push: { mensajes: request.input('mensaje')  } });
+            await Conversacion.find({ id_chat: request.input('id_chat') })
+                            .updateOne({ $push: { mensajes: request.input('mensaje')  } });
             return response.status(200).json(await Conversacion.find({ id_chat: request.input('id_chat') }));
         } catch (error) {
             return response.status(400).send({error: error})

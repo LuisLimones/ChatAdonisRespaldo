@@ -36,10 +36,5 @@ Route.post('/obtener-conversacion', 'ConversacionController.buscarChat')
 Route.post('/obtener-grupos', 'ConversacionController.buscarGrupos')
 Route.post('/enviar-mensaje', 'ConversacionController.registrarMensaje')
 
-// Mongo | Prueba
-Route.post('/pruebaMongo', 'PruebaController.pruebaMongo')
-Route.get('/pruebaPg', 'PruebaController.pruebaPg')
-Route.post('/prueba-conver','ChatController.prueba')
-
 //Archivos
 Route.post('/archivos','ArchivoController.archivos');

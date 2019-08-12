@@ -12,7 +12,6 @@ class ChatController {
   }
   onEscribiendo(){
     this.socket.broadcast("escribiendomsj")
-    console.log('escribiendo...')
   }
 }
 

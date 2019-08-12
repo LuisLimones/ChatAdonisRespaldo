@@ -1,6 +1,5 @@
 'use strict'
 
-// instancia del modelo de usuarios para poder hacer las consultas a la bd
 const Usuario = use('App/Models/User')
 var Hash = use('Hash')
 var jwt = require('jsonwebtoken')
