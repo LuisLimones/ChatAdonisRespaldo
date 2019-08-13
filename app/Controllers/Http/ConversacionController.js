@@ -14,9 +14,7 @@ class ConversacionController {
                 conver.id_chat = request.input('chat_id');
                 conver.usuarios = request.input('usuarios');
                 conver.mensajes = request.input('mensajes');
-        
                 await conver.save();
-        
                 return response.status(200).json(conver);
             }
     }

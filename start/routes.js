@@ -21,15 +21,13 @@ Route.get('/', () => {
 })
 
 
-// Postgres | Usuarios
+// Postgres
 Route.post('/registrar-usuario', 'UsuarioController.registrarUsuario')
 Route.get('/obtener-usuarios', 'UsuarioController.mostrarUsuarios')
 Route.post('/buscar-usuario', 'UsuarioController.buscarUsuario')
-
-// Postgres | Chat
 Route.post('/reg-chat', 'ChatController.registrar')
 
-// Mongo | Conversaciones
+// Mongo
 Route.post('/iniciar-conversacion', 'ConversacionController.iniciarConversacion')
 Route.post('/login','UsuarioController.login')
 Route.post('/obtener-conversacion', 'ConversacionController.buscarChat')
